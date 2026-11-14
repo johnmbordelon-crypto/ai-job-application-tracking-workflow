@@ -33,7 +33,19 @@ Manual tracking can introduce several challenges:
 This project was designed to establish a consistent, evidence-based workflow for managing those tasks.
 
 ## Workflow Architecture
-
+```mermaid
+flowchart TD
+    A["Weekly Application Evidence Folder"] --> B["Inventory PDFs and Screenshots"]
+    B --> C["Extract Company, Position, and Date"]
+    C --> D["Search Connected Gmail Accounts"]
+    D --> E["Evaluate Application Outcomes"]
+    E --> F["Generate Excel Application Log"]
+    F --> G["Validate Records and Formatting"]
+    G --> H{"Validation Passed?"}
+    H -->|No| I["Correct Issues and Recheck"]
+    I --> G
+    H -->|Yes| J["Deliver Verified Excel Workbook"]
+```
 The Revised Job Log skill follows four primary stages.
 
 ### Stage 1: Application Evidence Collection
